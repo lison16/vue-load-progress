@@ -4,37 +4,37 @@
       <h1 class="title">vue-top-progress</h1>
       <div class="actions">
         <div class="action">
-          <div class="button" @click="$loadProgress.start()">
+          <div class="button" @click="$loading.start()">
             Start
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.pause()">
+          <div class="button" @click="$loading.pause()">
             Pause
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.done()">
+          <div class="button" @click="$loading.done()">
             Done
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.fail()">
+          <div class="button" @click="$loading.fail()">
             Fail
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.increase(20)">
+          <div class="button" @click="$loading.increase(20)">
             Increase(20)
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.decrease(20)">
+          <div class="button" @click="$loading.decrease(20)">
             Decrease(20)
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$loadProgress.set(20)">
+          <div class="button" @click="$loading.set(20)">
             Set(20)
           </div>
         </div>
@@ -52,9 +52,9 @@
 <script>
 export default {
   mounted () {
-    this.$loadProgress.start()
+    this.$loading.start()
     setTimeout(() => {
-      this.$loadProgress.done()
+      this.$loading.done()
     }, 2000)
   }
 }

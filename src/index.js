@@ -12,15 +12,17 @@ const install = function (Vue, opt = {}) {
     document.body.appendChild(instance.$el)
     return instance
   }
-  Vue.prototype.$loadProgress = loadProgress()
+  const loading = loadProgress()
+  Vue.prototype.$loading = loading
   Vue.component(VueLoadProgress.name, VueLoadProgress)
+  return loading
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {
+export default Object.assign(install, {
   VueLoadProgress,
   install
-}
+})
