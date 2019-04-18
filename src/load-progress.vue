@@ -4,7 +4,7 @@
     v-on:enter="enter"
     v-on:after-enter="afterEnter"
     v-bind:css="false">
-    <div class="top-progress" :style="barStyle" v-if="show">
+    <div class="v-load-progress" :style="barStyle" v-if="show">
       <div class="peg" :style="pegStyle">
       </div>
     </div>
@@ -41,7 +41,7 @@ let queue = (() => {
 })()
 
 export default {
-  name: 'vueTopprogress',
+  name: 'VueLoadProgress',
 
   data () {
     return {

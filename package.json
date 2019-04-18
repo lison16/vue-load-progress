@@ -1,6 +1,6 @@
 {
-  "name": "vue-top-progress",
-  "version": "0.7.0",
+  "name": "vue-load-progress",
+  "version": "1.0.0",
   "description": "Yet another top progress loading bar component for Vue.js",
   "main": "./dist/vue-top-progress.min.js",
   "files": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dalphyx/vue-top-progress.git"
+    "url": "git+https://github.com/lison16/vue-load-progress.git"
   },
   "keywords": [
     "vue",
@@ -31,9 +31,9 @@
   "author": "dalphyx <wjcbmk@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dalphyx/vue-top-progress/issues"
+    "url": "https://github.com/lison16/vue-load-progress/issues"
   },
-  "homepage": "https://github.com/dalphyx/vue-top-progress#readme",
+  "homepage": "https://github.com/lison16/vue-load-progress#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",

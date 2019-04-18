@@ -1,41 +1,40 @@
 <template>
   <div class="app">
-    <vue-topprogress ref="topProgress"></vue-topprogress>
     <div class="container">
       <h1 class="title">vue-top-progress</h1>
       <div class="actions">
         <div class="action">
-          <div class="button" @click="$refs.topProgress.start()">
+          <div class="button" @click="$loadProgress.start()">
             Start
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.pause()">
+          <div class="button" @click="$loadProgress.pause()">
             Pause
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.done()">
+          <div class="button" @click="$loadProgress.done()">
             Done
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.fail()">
+          <div class="button" @click="$loadProgress.fail()">
             Fail
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.increase(20)">
+          <div class="button" @click="$loadProgress.increase(20)">
             Increase(20)
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.decrease(20)">
+          <div class="button" @click="$loadProgress.decrease(20)">
             Decrease(20)
           </div>
         </div>
         <div class="action">
-          <div class="button" @click="$refs.topProgress.set(20)">
+          <div class="button" @click="$loadProgress.set(20)">
             Set(20)
           </div>
         </div>
@@ -51,17 +50,12 @@
 </template>
 
 <script>
-import { vueTopprogress } from '../../dist/vue-top-progress.min'
-
 export default {
   mounted () {
-    this.$refs.topProgress.start()
+    this.$loadProgress.start()
     setTimeout(() => {
-      this.$refs.topProgress.done()
+      this.$loadProgress.done()
     }, 2000)
-  },
-  components: {
-    vueTopprogress
   }
 }
 </script>
