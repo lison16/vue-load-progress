@@ -1,4 +1,5 @@
 import VueLoadProgress from './load-progress.vue'
+import Vue from 'vue'
 
 const install = function (Vue, opt = {}) {
   if (install.installed) {
@@ -22,7 +23,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default Object.assign(install, {
+const loading = install(Vue)
+
+export default Object.assign(loading, {
   VueLoadProgress,
   install
 })

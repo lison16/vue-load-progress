@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="container">
-      <h1 class="title">vue-top-progress</h1>
+      <h1 class="title">vue-load-progress</h1>
       <div class="actions">
         <div class="action">
           <div class="button" @click="$loading.start()">

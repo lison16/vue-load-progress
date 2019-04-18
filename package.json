@@ -1,6 +1,6 @@
 {
   "name": "vue-load-progress",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Yet another top progress loading bar component for Vue.js",
   "main": "./dist/vue-load-progress.min.js",
   "files": [

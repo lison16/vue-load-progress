@@ -1,6 +1,8 @@
-# vue-top-progress [![npm package](https://img.shields.io/npm/v/vue-top-progress.svg)](https://www.npmjs.com/package/vue-top-progress)
+# vue-load-progress
 
-> Yet another top progress loading bar component for Vue.js.
+[![npm package](https://img.shields.io/npm/v/vue-load-progress.svg)](https://www.npmjs.com/package/vue-load-progress)
+
+> Secondary development based on vue-top-progress
 
 # Requirements
 
@@ -9,41 +11,79 @@
 # Installation
 
 ``` bash
-$ npm install vue-top-progress
+$ npm install vue-load-progress
 ```
 # Demo
-[Demo](https://dalphyx.github.io/vue-top-progress/)
+[Demo](https://lison16.github.io/vue-load-progress/)
 
 # Usage
+
+### Mode 1
+
 ``` html
 <template>
-  <vue-topprogress ref="topProgress"></vue-topprogress>
+  <vue-load-progress ref="progress"></vue-load-progress>
 </template>
 
 <script>
-import vueTopprogress from 'vue-top-progress'
-
-Vue.use(vueTopprogress)
-
-// or
-
-import { vueTopprogress } from 'vue-top-progress'
-
+import { VueLoadProgress } from 'vue-top-progress'
 export default {
+  components: {
+    VueLoadProgress
+  },
   mounted () {
-    this.$refs.topProgress.start()
-
+    this.$refs.progress.start()
     // Use setTimeout for demo
     setTimeout(() => {
-      this.$refs.topProgress.done()
+      this.$refs.progress.done()
     }, 2000)
-  },
-
-  components: {
-    vueTopprogress
   }
 }
 </script>
+```
+
+### Mode 2
+
+```javascript
+// main.js
+import Vue from 'vue'
+import VueLoadProgress from 'vue-load-progress'
+Vue.use(VueLoadProgress)
+new Vue({
+  //...
+})
+```
+``` html
+<template>
+  <vue-load-progress ref="progress"></vue-load-progress>
+</template>
+
+<script>
+export default {
+  mounted () {
+    this.$refs.progress.start()
+    // Use setTimeout for demo
+    setTimeout(() => {
+      this.$refs.progress.done()
+    }, 2000)
+  }
+}
+</script>
+```
+
+### Mode 3
+
+```javascript
+// test.js
+import $loading from 'vue-load-progress'
+
+$loading.height = 2
+
+$loading.start()
+
+setTimeout(() => {
+  $loading.done()
+}, 2000)
 ```
 
 # Props
